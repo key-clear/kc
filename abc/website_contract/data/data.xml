@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- enable unit of measure and discount in sales config -->
+    <record id="base.group_user" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('product.group_uom'))]"/>
+    </record>
+    <record id="base.group_user" model="res.groups">
+        <field name="implied_ids" eval="[(4, ref('sale.group_discount_per_so_line'))]"/>
+    </record>
+
+    <!-- Recurrent payment emails -->
+    <record id="email_payment_close" model="mail.template">
+        <field name="name">email_payment_close</field>
+        <field name="email_from">${(object.manager_id.email or object.company_id.email or 'noreply@localhost')|safe}</field>
+        <field name="subject">Termination of subscription ${object.code}</field>
+        <field name="email_to">${ctx['email_to'] or ''}</field>
+        <field name="model_id" ref="sale_contract.model_sale_subscription"/>
+        <field name="body_html">
+            <![CDATA[
+    <div style="font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+
+        <p>Hello ${object.partner_id.name},</p>
+        
+        <p>
+        % if ctx.get('payment_method') and ctx.get('total_amount'):
+          Our final attempt to process a payment for your subscription using your payment method
+          ${ctx['payment_method']}
+          for ${ctx['total_amount']} ${ctx.get('currency')} failed.
+          % if ctx.get('error'):
+            Your bank or credit institution gave the following details about the issue: <pre>${ctx['error']}</pre>.
+          %endif
+        % else:
+          Our final attempt to process a payment for your subscription failed because we have no payment method recorded for you.
+        % endif 
+        </p>
+
+        <p>
+          As your payment should have been made <strong>15 days ago</strong>, your subscription has been terminated.
+        </p>
+
+        <br/>
+        <p>Should you wish to resolve this issue, do not hesitate to contact us.</p>
+        <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>
+        <br/>
+        <br/>
+        <div style="width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;">
+            <h3 style="margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;">
+                <strong style="text-transform:uppercase;">${object.company_id.name}</strong></h3>
+        </div>
+        <div style="width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;">
+            <span style="color: #222; margin-bottom: 5px; display: block; ">
+                ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}
+            </span>
+            % if object.company_id.phone:
+                <div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">
+                    Phone:&nbsp; ${object.company_id.phone}
+                </div>
+            % endif
+            % if object.company_id.website:
+                <div>
+                    Web :&nbsp;<a href="${object.company_id.website}">${object.company_id.website}</a>
+                </div>
+            % endif
+            <p></p>
+        </div>
+    </div>
+                ]]>
+        </field>
+    </record>
+
+    <record id="email_payment_reminder" model="mail.template">
+        <field name="name">email_payment_reminder</field>
+        <field name="email_from">${(object.manager_id.email or object.company_id.email or 'noreply@localhost')|safe}</field>
+        <field name="subject">Payment reminder for subscription ${object.code}</field>
+        <field name="email_to">${ctx['email_to'] or ''}</field>
+        <field name="model_id" ref="sale_contract.model_sale_subscription"/>
+        <field name="body_html">
+            <![CDATA[
+    <div style="font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+
+        <p>Hello ${object.partner_id.name},</p>
+        
+        <p>
+        % if ctx.get('payment_method') and ctx.get('total_amount'):
+          We were unable to process a payment for your subscription using your payment method
+          ${ctx['payment_method']}
+          for ${ctx['total_amount']} ${ctx.get('currency')}.
+          % if ctx.get('error'):
+            Your bank or credit institution gave the following details about the issue: <pre>${ctx['error']}</pre>.
+          %endif
+        % else:
+          We were unable to process a payment for your subscription because we have no payment method recorded for you.
+        % endif 
+        </p>
+
+        <p>
+          Your subscription ${ctx.get('code')} is still valid but will be <b>suspended</b>
+          on ${ctx.get('date_close')} unless the payment succeeds in the mean time (we will retry once every day).
+          Please double-check that you have sufficient funds.
+        </p>
+
+        <br/>
+        <p>If you have any question, do not hesitate to contact us.</p>
+        <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>
+        <br/>
+        <br/>
+        <div style="width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;">
+            <h3 style="margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;">
+                <strong style="text-transform:uppercase;">${object.company_id.name}</strong></h3>
+        </div>
+        <div style="width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;">
+            <span style="color: #222; margin-bottom: 5px; display: block; ">
+                ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}
+            </span>
+            % if object.company_id.phone:
+                <div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">
+                    Phone:&nbsp; ${object.company_id.phone}
+                </div>
+            % endif
+            % if object.company_id.website:
+                <div>
+                    Web :&nbsp;<a href="${object.company_id.website}">${object.company_id.website}</a>
+                </div>
+            % endif
+            <p></p>
+        </div>
+    </div>
+                ]]>
+        </field>
+    </record>
+
+    <record id="email_payment_success" model="mail.template">
+        <field name="name">email_payment_success</field>
+        <field name="email_from">${(object.user_id.email or object.company_id.email or 'noreply@localhost')|safe}</field>
+        <field name="subject">Invoice for subscription ${ctx.get('code')}</field>
+        <field name="email_to">${ctx['email_to'] or ''}</field>
+        <field name="model_id" ref="account.model_account_invoice"/>
+        <field name="report_template" ref="account.account_invoices" />
+        <field name="report_name">Invoice_${ctx.get('code')}_${ctx.get('previous_date')}</field>
+        <field name="body_html">
+            <![CDATA[
+    <div style="font-family: 'Lucida Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+
+        <p>Hello ${object.partner_id.name},</p>
+        
+        <p>
+            Your subscription (${ctx.get('code')}) has just been renewed
+            %if ctx.get('total_amount') and ctx.get('payment_method'):
+                via a payment of ${ctx['total_amount']} ${ctx['currency']} charged on ${ctx['payment_method']}
+                .
+            %endif
+        </p>
+
+        <p>You will find your invoice attached.</p>
+
+        %if ctx.get('next_date'):
+        <p>
+          Your next invoice will be on ${ctx.get('next_date')}.
+        </p>
+        %endif
+
+        <br/>
+        <p>If you have any question, do not hesitate to contact us.</p>
+        <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>
+        <br/>
+        <br/>
+        <div style="width: 375px; margin: 0px; padding: 0px; background-color: #8E0000; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;">
+            <h3 style="margin: 0px; padding: 2px 14px; font-size: 12px; color: #DDD;">
+                <strong style="text-transform:uppercase;">${object.company_id.name}</strong></h3>
+        </div>
+        <div style="width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;">
+            <span style="color: #222; margin-bottom: 5px; display: block; ">
+                ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}
+            </span>
+            % if object.company_id.phone:
+                <div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">
+                    Phone:&nbsp; ${object.company_id.phone}
+                </div>
+            % endif
+            % if object.company_id.website:
+                <div>
+                    Web :&nbsp;<a href="${object.company_id.website}">${object.company_id.website}</a>
+                </div>
+            % endif
+            <p></p>
+        </div>
+    </div>
+                ]]>
+        </field>
+    </record>
+
+    <record id="email_contract_open" model="mail.template">
+        <field name="name">email_contract_open</field>
+        <field name="email_from">${(object.user_id.email or object.company_id.email or 'noreply@localhost')|safe}</field>
+        <field name="subject">Your subscription ${object.code}is active!</field>
+        <field name="email_to">${ctx.get('email_to') or object.partner_id.email}</field>
+        <field name="model_id" ref="sale_contract.model_sale_subscription"/>
+        <field name="body_html">
+            <![CDATA[
+    <div style="font-family: 'Lucica Grande', Ubuntu, Arial, Verdana, sans-serif; font-size: 12px; color: rgb(34, 34, 34); background-color: rgb(255, 255, 255); ">
+
+        <p>Hello ${object.partner_id.name},</p>
+        
+        <p>Your new Odoo Online Subscription is ready!</p>
+
+        <p>You can view your subscription online by going to our <a href="/my/home">Online Portal</a> or by following this link:</p>
+        <a style="display:block; width: 150px; height:20px; margin-left: 120px; color: #DDD; font-family: 'Lucida Grande', Helvetica, Arial, sans-serif; font-size: 13px; font-weight: bold; text-align: center; text-decoration: none !important; line-height: 1; padding: 5px 0px 0px 0px; background-color: #a24689; border-radius: 5px 5px; background-repeat: repeat no-repeat;"
+            href="/my/contract/${object.id}/${object.uuid}">View Subscription</a>
+
+
+        <p>With this page, you can easily manage your contracts:</p>
+        <ul>
+            <li>Add or remove options</li>
+            <li>Change your recurring period from monthly to annually</li>
+            <li>Contact your sales representative</li>
+        </ul>
+        <p>You can access this link publicly or share it with someone else to give him/her the right to manage this subscription.</p>
+        <br/>
+        <p>If you have any question, do not hesitate to contact us.</p>
+        <p>Thank you for choosing ${object.company_id.name or 'us'}!</p>
+        <br/>
+        <br/>
+        <div style="width: 347px; margin: 0px; padding: 0px; background-color: #a24689; border-top-left-radius: 5px 5px; border-top-right-radius: 5px 5px; background-repeat: repeat no-repeat;">
+            <h3 style="margin: 0px; padding: 2px 14px; font-size: 12px; color: #fff;">
+                <strong style="text-transform:uppercase;">${object.company_id.name}</strong></h3>
+        </div>
+        <div style="width: 347px; margin: 0px; padding: 5px 14px; line-height: 16px; background-color: #F2F2F2;">
+            <span style="color: #333; margin-bottom: 5px; display: block; ">
+                ${object.company_id.partner_id.sudo().with_context(show_address=True, html_format=True).name_get()[0][1] | safe}
+            </span>
+            % if object.company_id.phone:
+                <div style="margin-top: 0px; margin-right: 0px; margin-bottom: 0px; margin-left: 0px; padding-top: 0px; padding-right: 0px; padding-bottom: 0px; padding-left: 0px; ">
+                    Phone:&nbsp; ${object.company_id.phone}
+                </div>
+            % endif
+            % if object.company_id.website:
+                <div>
+                    Web :&nbsp;<a href="${object.company_id.website}">${object.company_id.website}</a>
+                </div>
+            % endif
+            <p></p>
+        </div>
+    </div>
+                ]]>
+        </field>
+    </record>
+    
+    <data noupdate="1">
+        <record id="base.open_menu" model="ir.actions.todo">
+            <field name="action_id" ref="sale_contract.action_client_sale_subscription_menu"/>
+            <field name="state">open</field>
+        </record>
+
+        <record model="web.tip" id="subscription_tip_1">
+             <field name="title"></field>
+             <field name="description"><![CDATA[Click here to view this contract in the frontend. Your customers can access the same page from their portal to manage their subscription. You can also send them the secure url by e-mail, no login needed!]]></field>
+             <field name="model">sale.subscription</field>
+             <field name="mode">form</field>
+             <field name="trigger_selector">.oe_button_box .o_open_subscription:visible</field>
+             <field name="highlight_selector">.oe_button_box .o_open_subscription</field>
+             <field name="placement">left</field>
+         </record>
+    </data>
+</odoo>

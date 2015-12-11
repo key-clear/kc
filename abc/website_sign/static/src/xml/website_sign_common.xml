@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="website_sign.signature_item" name="Signature Item">
+        <t t-if="readonly">
+            <div t-if="type == 'signature' || type == 'initial'" class="o_sign_signature_item text-center" style="text-align: center;" t-att-data-signature="value"><span class="o_sign_helper"/><img t-if="value" t-att-src="value"/><t t-if="!value"><t t-esc="placeholder"/></t><t t-if="editMode" t-call="website_sign.signature_item_configuration"/></div>
+
+            <div t-if="type == 'text' || type == 'textarea'" class="o_sign_signature_item"><t t-raw="value"/><t t-if="editMode" t-call="website_sign.signature_item_configuration"/></div>
+        </t>
+
+        <t t-if="!readonly">
+            <button t-if="type == 'signature' || type == 'initial'" class="o_sign_signature_item text-center"><span class="o_sign_helper"/><t t-esc="placeholder"/></button>
+            <input t-if="type == 'text'" type="text" class="o_sign_signature_item" t-att-placeholder="placeholder"/>
+            <textarea t-if="type == 'textarea'" class="o_sign_signature_item" t-att-placeholder="placeholder"/>
+        </t>
+    </t>
+
+    <div t-name="website_sign.signature_item_configuration" class="o_sign_config_area">
+        <span class="fa fa-arrows"/>
+        <span class="o_sign_responsible_display"/>
+    </div>
+
+    <div t-name="website_sign.chatter" class="o_sign_chatter">
+        <div t-if="widget.sendAccess" class="form-group">
+            <textarea rows="3" name="comment" class="form-control" placeholder="Send a note..."/>
+            <hr/>
+        </div>
+        <ul class="media-list">
+            <t t-foreach="widget.messages" t-as="message">
+                <li class="media" t-if="message.message_type === 'comment'">
+                    <div class="media-body">
+                        <img class="media-object pull-left" t-att-src="message.author_id.avatar"/>
+                        <div class="media-body">
+                            <h5 class="media-heading"><t t-esc="message.author_id.name"/> <small>on <t t-esc="message.date"/></small></h5>
+                            <div t-raw="message.body"/>
+                        </div>
+                    </div>
+                </li>
+            </t>
+        </ul>
+    </div>
+</templates>

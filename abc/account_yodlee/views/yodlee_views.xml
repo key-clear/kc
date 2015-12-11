@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <template id="assets_backend" name="account yodlee assets" inherit_id="web.assets_backend">
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="/account_yodlee/static/src/js/yodlee.js"></script>
+      </xpath>
+    </template>
+
+    <record id="account_view_form_online_sync_inherit_yodlee" model="ir.ui.view">
+      <field name="name">account.view.form.online.sync.inherit.yodlee</field>
+      <field name="model">account.journal.onlinesync.config</field>
+      <field name="inherit_id" ref="account_online_sync.view_config_online_sync_journal_form"/>
+      <field name="arch" type="xml">
+        <field name="online_institution_id" position="after">
+          <field name="yodlee_account_id" widget="yodleeAccountConfiguration" attrs="{'invisible': ['|',('online_institution_id', '=', False), ('online_type', '!=', 'yodlee')]}"/>
+        </field>
+      </field>
+    </record>
+
+  </data>
+</openerp>

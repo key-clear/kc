@@ -1,0 +1,1291 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * mass_mailing_themes
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-14 10:32+0000\n"
+"PO-Revision-Date: 2015-09-29 10:15+0000\n"
+"Last-Translator: Aleksandar Vangelovski <aleksandarv@hbee.eu>\n"
+"Language-Team: Macedonian (http://www.transifex.com/odoo/odoo-9/language/mk/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: mk\n"
+"Plural-Forms: nplurals=2; plural=(n % 10 == 1 && n % 100 != 11) ? 0 : 1;\n"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "$50.00"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "&amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"&amp;nbsp;\n"
+"                                        <span class=\"fa fa-check fa-3x\"/>\n"
+"                                        &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"&amp;nbsp;\n"
+"                                        <span class=\"fa fa-truck fa-3x\"/>\n"
+"                                        &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"&amp;nbsp;\n"
+"                                        <span class=\"fa fa-usd fa-3x\"/>\n"
+"                                        &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid ""
+"&amp;nbsp;\n"
+"                                    <span class=\"fa fa-10x fa-gift\"/>\n"
+"                                    &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-10x fa-gift\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-10x fa-github-alt\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-5x fa-bookmark\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-5x fa-bookmark\"/>&amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-5x fa-map-marker\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-5x fa-map-marker\"/>\n"
+"                                &amp;nbsp;\n"
+"                                <br/>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-5x fa-map-marker\"/>&amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-6x fa-ticket\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-bullhorn fa-6x\"/>&amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-calendar fa-5x\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-camera fa-10x\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-lock fa-10x\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-picture-o fa-10x\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-tag fa-10x\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"fa fa-user fa-5x\"/>&amp;nbsp;<br/>\n"
+"                                User : <strong>John Doe</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+msgid ""
+"&amp;nbsp;\n"
+"                                <span class=\"ffa fa-5x fa-map-marker\"/>\n"
+"                                &amp;nbsp;"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+msgid ""
+"&amp;nbsp;\n"
+"                            <span class=\"fa fa-user fa-5x\" style=\"margin: 5px 20px;\"/>\n"
+"                            &amp;nbsp;\n"
+"                            <br/>\n"
+"                            User: John Doe"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"&amp;nbsp;\n"
+"                            <span class=\"fa fa-user fa-5x\" style=\"margin: 5px 20px;\"/>\n"
+"                            <br/>\n"
+"                            User: John Doe"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid ""
+"&amp;nbsp;\n"
+"                            <span class=\"fa fa-user fa-5x\"/>\n"
+"                            <br/>\n"
+"                            <span style=\"color:#282D29;font-size:12px\">User: John Doe</span>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+msgid ""
+"&amp;nbsp;\n"
+"                    <br/><br/>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid ""
+"123 Flower Drive <br/>\n"
+"                                                        Victoria, BC <br/>\n"
+"                                                        V9P 2E8 <br/>\n"
+"                                                        1(250)222-2232"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+msgid ""
+"123 Flower Drive <br/>\n"
+"                                                    Victoria, BC <br/>\n"
+"                                                    V9P 2E8 <br/>\n"
+"                                                    1(250)222-2232"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid ""
+"123 Flower Drive<br/>\n"
+"                                                        Victoria, BC<br/>\n"
+"                                                        V9P 2E8<br/>\n"
+"                                                        1(250)222-2232"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"123 Flower Drive<br/>\n"
+"                                    Victoria, BC<br/>\n"
+"                                    V9P 2E8<br/>\n"
+"                                    1(250)222-2232"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "20% off!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid "30% discount when you sign up now!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+msgid ""
+"<span>Discount Code : </span> <strong style=\"border:1px solid "
+"#d1d1d1;padding:10px\"> 45A9E77DGW8455</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+msgid "<strong style=\"font-size:18px\"> Save 20% when you upgrade now!</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid "<strong>Bob Erlicious</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid "<strong>Invoice: 00234</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "<strong>My Company</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+msgid ""
+"<strong>We need you to update your account information. If there is ever a "
+"problem with your account, this information will make it easier for you to "
+"log back in.</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "<strong>​Period</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid ""
+"<time datetime=\"2014-07-20\"> <span style=\"display: block;font-size: 50px"
+";line-height: 1;padding-top: 10px\">21</span> <span style=\"display: block"
+";font-size: 30px;line-height: 1\">Jul</span> <span style=\"display: block"
+";font-size: 16px;line-height: 1;color: #FFFFFF;font-weight: 600\">ALL "
+"DAY</span> </time>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"<time datetime=\"2014-07-20\"> <span style=\"display: block;font-size: 50px"
+";line-height: 1;padding-top: 10px\">21</span> <span style=\"display: block"
+";font-size: 30px;line-height: 1\">Jul</span> <span style=\"display: block"
+";font-size: 16px;line-height: 1;color: #fff;font-weight: 600\">ALL "
+"DAY</span> </time>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+msgid ""
+"<time datetime=\"2014-07-20\"> <span style=\"display: block;font-size: 50px"
+";line-height: 1;padding-top: 10px;color:#fff\">21</span> <span "
+"style=\"display: block;font-size: 30px;line-height: "
+"1;color:#fff\">Jul</span> <span style=\"display: block;font-size: 16px;line-"
+"height: 1;color: #fff;font-weight: 600\">ALL DAY</span> </time>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.mass_mail_premium_theme_list
+msgid "Airmail"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Amount"
+msgstr "Износ"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Apps That Help You Grow Your Business"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Apps That Help You Grow Your Business!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "April 3, 2014"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "August"
+msgstr "Август"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid ""
+"Because I've invited you, you can also use the below coupon code to receive "
+"a 30% discount on you first months subscription!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"Because I've invited you, you can also use the below coupon code to receive "
+"a 50% discount on you first months subscription!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Bob Erlicious"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Check this out!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.mass_mail_premium_theme_list
+msgid "Cleave"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+msgid "Code: <strong>45A9E77DGW8455</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid "Come check out my stuff!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid "Come check out new Stuff!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid "Come check out new stuff!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Contact"
+msgstr "Контакт"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Contact Us"
+msgstr "Контактирајте не"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Dear ${object.name}"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Description"
+msgstr "Опис"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+msgid "Discount Code: <strong> 45A9E77DGW8455</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Discount Code: <strong>45A9E77DGW8455</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+msgid "Enjoy 50% of your next purchase!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Facebook"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.mass_mail_premium_theme_list
+msgid "Go"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid "Good News!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Good news!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"Great stories are for everyone even when only written for just one person. "
+"If you try to write with a wide general audience in mind, your story will "
+"ring false and be bland. No one will be interested. Write for one person. If"
+" it’s genuine for the one, it’s genuine for the rest."
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"Great stories have personality. Consider telling a great story that provides"
+" personality. Writing a story with personality for potential clients will "
+"assist with making a relationship connection. This shows up in small quirks "
+"like word choices or phrases. Write from your point of view, not from "
+"someone else's experience.<br/>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+msgid "Hello Bob,"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Hey Bob,"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+msgid "Hurry Up"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid "Hurry Up!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid ""
+"I set up a profile where I can do tons of really awesome stuff! So I want "
+"you to follow me and see it all. Once you join us, you'll be able to do all "
+"sorts of new stuff too."
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+msgid ""
+"I set up a profile where I can do tons of really awesome stuff. I want you "
+"to follow me so we can keep in touch!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"I set up an Odoo profile where I can do tons of really awesome stuff. I want"
+" you to follow me so we can keep in touch!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+msgid ""
+"I set up profile where I can do tons of really awesome stuff. I want you to "
+"follow me so we can keep in touch!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Info"
+msgstr "Информација"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Invoice: 00234"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Kind Regards,"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Link"
+msgstr "Врска"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Mail Theme Colors"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Michael Fletcher"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "My Account"
+msgstr "Мојата сметка"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid "My Order"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.mass_mail_premium_theme_list
+msgid "Narrative"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.mass_mail_premium_theme_list
+msgid "Neopolitan"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"Odoo is continuing to grow and we miss seeing you be a part of it! We've "
+"increased store hours and have lot's of new brands available. To welcome you"
+" back please accept this 20% discount on you next purchase by clicking the "
+"button below."
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Payment"
+msgstr "Плаќање"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Period"
+msgstr "Период"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Place Order"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Plan"
+msgstr "План"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Redeem Discount!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "See you soon!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.mass_mail_premium_theme_list
+msgid "Select"
+msgstr "Избери"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Shipping"
+msgstr "Испорака"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid "Sign up now and receive a 20% discount!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Silver Plan"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.mass_mail_premium_theme_list
+msgid "Skyline"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid "Step 1"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Step 1:"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid "Step 2"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Step 2:"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Step 3:"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.mass_mail_premium_theme_list
+msgid "Sunday"
+msgstr "Недела"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"The amount of $50.00 CAD has been charged on the credit card ending with "
+"0123."
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Title"
+msgstr "Титула"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "To track your order or make any changes please click the button below."
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+msgid "Track shipping"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Twitter"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Unsubscribe"
+msgstr "Отпиши се"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+msgid "Upgrade"
+msgstr "Надгради"
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+msgid "Upgrade to Premium Account!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid "Visit Now"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid ""
+"We are continuing to grow and we miss seeing you be a part of it! We've "
+"increased store hours and have lot's of new brands available. To welcome you"
+" back please accept this 20% discount on you next purchase by clicking the "
+"button below."
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+msgid ""
+"We need you to update your account information. If there is ever a problem "
+"with your account, this information will make it easier for you to log back "
+"in."
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"We would like to inform you that your order has shipped! More details below."
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid ""
+"We would like you to know that you have successfully subscribed the news "
+"letter. Following are the details about your plan."
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+msgid ""
+"We would like you to know that your order has shipped! To view your order or"
+" make any changes please click the \"my order\" button below."
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "YOUR ORDER HAS SHIPPED"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "You get a 20% discount for signing up!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid ""
+"You'll be the first to hear about new arrivals, exclusive promotionas, cool collaborations, and the latest in everything.\n"
+"                                    <br/>\n"
+"                                    Enter <strong>XLKIJP6887F</strong> when you sign up!<br/>\n"
+"                                    <br/>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Your Event Name"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "Your Logo"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+msgid "Your order has been shipped!"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.mass_mail_premium_theme_list
+msgid "Zen-Flat"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+msgid "social icon"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_airmail
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_cleave
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_narrative
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_neopolitan
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_skyline
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_sunday
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "© 2014 All Rights Reserved"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+msgid ""
+"​\n"
+"                                                  May - June 2014"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+msgid ""
+"​\n"
+"                                                $39.99"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+msgid ""
+"​\n"
+"                                                <strong>Amount</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+msgid "​    <strong>Plan</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "​$39.99"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "​<strong>Amount</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "​<strong>Plan</strong>"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_go
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "​Gold Status"
+msgstr ""
+
+#. module: mass_mailing_themes
+#: model:ir.ui.view,arch_db:mass_mailing_themes.email_designer_snippets_zenflat
+msgid "​May - June 2014"
+msgstr ""

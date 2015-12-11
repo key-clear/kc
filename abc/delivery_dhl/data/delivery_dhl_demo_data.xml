@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+	<record id="delivery_carrier_dhl_intl" model="delivery.carrier">
+        <field name="dhl_SiteID">CustomerTest</field>
+        <field name="dhl_password">alkd89nBV</field>
+        <field name="dhl_account_number">803921577</field>
+    </record>
+
+    <record id="delivery_carrier_dhl_dom" model="delivery.carrier">
+        <field name="dhl_SiteID">CustomerTest</field>
+        <field name="dhl_password">alkd89nBV</field>
+        <field name="dhl_account_number">803921577</field>
+    </record>
+
+</data>
+</odoo>

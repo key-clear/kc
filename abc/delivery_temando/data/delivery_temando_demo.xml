@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <record id="delivery_carrier_temando" model="delivery.carrier">
+        <field name="temando_username">TEMANDOTEST</field>
+        <field name="temando_password">temandopass1</field>
+        <field name="temando_client_id">20420</field>
+        <field name="temando_hs_code">123456789012</field>
+    </record>
+
+     <record id="delivery_carrier_temando_international" model="delivery.carrier">
+        <field name="temando_username">TEMANDOTEST</field>
+        <field name="temando_password">temandopass1</field>
+        <field name="temando_client_id">20420</field>
+        <field name="temando_hs_code">123456789012</field>
+    </record>
+
+    <!-- dirty hack time:
+         - currencies are disabled by default, except EUR and USD
+         - sometimes, Temando returns AUD...
+        (for any inquiries, please contact the Ministry of Silly Walks)
+     -->
+    <record id='base.AUD' model='res.currency'>
+        <field name='active' eval='True'/>
+    </record>
+
+</data>
+</odoo>

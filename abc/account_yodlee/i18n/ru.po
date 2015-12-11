@@ -1,0 +1,187 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * account_yodlee
+# 
+# Translators:
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-18 12:01+0000\n"
+"PO-Revision-Date: 2015-09-18 12:08+0000\n"
+"Last-Translator: Martin Trigaux\n"
+"Language-Team: Russian (http://www.transifex.com/odoo/odoo-9/language/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: ru\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_online_account_account_id
+msgid "Account"
+msgstr ""
+
+#. module: account_yodlee
+#: code:addons/account_yodlee/models/yodlee.py:176
+#, python-format
+msgid "An error has occured while trying to get transactions, try again later"
+msgstr ""
+
+#. module: account_yodlee
+#: code:addons/account_yodlee/models/res_config.py:46
+#: code:addons/account_yodlee/models/res_config.py:61
+#: code:addons/account_yodlee/models/yodlee.py:71
+#: code:addons/account_yodlee/models/yodlee.py:91
+#: code:addons/account_yodlee/models/yodlee.py:117
+#, python-format
+msgid "An error has occurred while trying to connect to yodlee service"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model,name:account_yodlee.model_res_company
+msgid "Companies"
+msgstr "Компании"
+
+#. module: account_yodlee
+#: model:ir.ui.view,arch_db:account_yodlee.account_config_settings_view_inherit_yodlee
+msgid "Create New User"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.ui.view,arch_db:account_yodlee.account_config_settings_view_inherit_yodlee
+msgid "Create new User"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model,name:account_yodlee.model_online_account
+msgid "Email Thread"
+msgstr "Цепочка эл.почты"
+
+#. module: account_yodlee
+#: code:addons/account_yodlee/models/res_config.py:49
+#, python-format
+msgid "Incorrect Yodlee login/password, please check your credentials"
+msgstr ""
+
+#. module: account_yodlee
+#: code:addons/account_yodlee/models/yodlee.py:74
+#, python-format
+msgid ""
+"Incorrect Yodlee login/password, please check your credentials in "
+"accounting/settings"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model,name:account_yodlee.model_account_journal
+msgid "Journal"
+msgstr "Журнал"
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_res_company_yodlee_last_login
+msgid "Last login"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_account_journal_onlinesync_config_yodlee_account_id
+msgid "Online Account"
+msgstr ""
+
+#. module: account_yodlee
+#: code:addons/account_yodlee/models/yodlee.py:63
+#, python-format
+msgid "Please configure your yodlee account first in accounting>settings"
+msgstr ""
+
+#. module: account_yodlee
+#: code:addons/account_yodlee/models/res_config.py:36
+#, python-format
+msgid "Please fill all fields related to yodlee first!"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_online_account_site_account_id
+msgid "Site"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.ui.view,arch_db:account_yodlee.account_config_settings_view_inherit_yodlee
+msgid "Use Existing User"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.ui.view,arch_db:account_yodlee.account_config_settings_view_inherit_yodlee
+msgid "Yodlee Configuration"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_account_config_settings_yodlee_id
+msgid "Yodlee ID"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_account_config_settings_yodlee_service_url
+msgid "Yodlee Service URL"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_account_config_settings_yodlee_new_user_email
+msgid "Yodlee User Email"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_account_config_settings_yodlee_new_user_login
+#: model:ir.model.fields,field_description:account_yodlee.field_account_config_settings_yodlee_user_login
+msgid "Yodlee User Login"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_account_config_settings_yodlee_new_user_password
+#: model:ir.model.fields,field_description:account_yodlee.field_account_config_settings_yodlee_user_password
+msgid "Yodlee User Password"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_res_company_yodlee_user_access_token
+msgid "Yodlee access token"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_res_company_yodlee_user_login
+msgid "Yodlee login"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_res_company_yodlee_user_password
+msgid "Yodlee password"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_res_company_yodlee_access_token
+msgid "access_token"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model,name:account_yodlee.model_account_config_settings
+msgid "account.config.settings"
+msgstr "account.config.settings"
+
+#. module: account_yodlee
+#: model:ir.model,name:account_yodlee.model_account_journal_onlinesync_config
+msgid "account.journal.onlinesync.config"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_res_company_yodlee_user_last_login
+msgid "last login"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model,name:account_yodlee.model_online_institution
+msgid "online.institution"
+msgstr ""
+
+#. module: account_yodlee
+#: model:ir.model.fields,field_description:account_yodlee.field_account_config_settings_yodlee_secret
+msgid "yodlee Secret"
+msgstr ""

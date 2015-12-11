@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+<record id="view_delivery_carrier_form_with_provider_temando" model="ir.ui.view">
+    <field name="name">delivery.carrier.form.provider.temando</field>
+    <field name="model">delivery.carrier</field>
+    <field name="inherit_id" ref="delivery.view_delivery_carrier_form"/>
+    <field name="arch" type="xml">
+        <xpath expr="//group[@name='general']" position='after'>
+            <group string='Temando Configuration' attrs="{'invisible': [('delivery_type', '!=', 'temando')]}">
+                <group>
+                    <field name="temando_client_id" attrs="{'required': [('delivery_type', '=', 'temando')]}"/>
+                    <field name="temando_username" attrs="{'required': [('delivery_type', '=', 'temando')]}"/>
+                    <field name="temando_password" attrs="{'required': [('delivery_type', '=', 'temando')]}"/>
+                    <field name="temando_test_mode"/>
+                    <field name="temando_delivery_nature" attrs="{'required': [('delivery_type', '=', 'temando')]}"/>
+                    <field name="temando_delivery_type" attrs="{'required': [('delivery_type', '=', 'temando')]}"/>
+                    <field name="temando_preferred_carrier"/>
+                    <field name="temando_subclass"/>
+                    <field name="temando_default_packaging_type"/>
+                    <field name="temando_location_selection"/>
+                    <field name="temando_pallet_type" attrs="{'invisible': [('temando_default_packaging_type', '!=', 'Pallet')], 'required': [('temando_default_packaging_type', '=', 'Pallet')]}"/>
+                    <field name="temando_pallet_nature" attrs="{'invisible': [('temando_default_packaging_type', '!=', 'Pallet')], 'required': [('temando_default_packaging_type', '=', 'Pallet')]}"/>
+                </group>
+                <group>
+                    <field name="temando_distance_measurement_type"/>
+                    <field name="temando_package_height"/>
+                    <field name="temando_package_width"/>
+                    <field name="temando_package_length"/>
+                    <field name="temando_weight_measurement_type"/>
+                    <field name="temando_hs_code"/>
+                </group>
+            </group>
+        </xpath>
+    </field>
+</record>
+
+</odoo>

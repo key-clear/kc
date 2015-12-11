@@ -1,0 +1,231 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * voip
+# 
+# Translators:
+# Eric Geens <ericgeens@yahoo.com>, 2015
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-01 06:30+0000\n"
+"PO-Revision-Date: 2015-09-22 09:50+0000\n"
+"Last-Translator: Yenthe Van Ginneken <yenthespam@gmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/odoo/odoo-9/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_sip_always_transfer
+msgid "Always redirect to physical phone"
+msgstr "Altijd doorschakelen naar fysiek toestel"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_voip_configurator_create_uid
+msgid "Created by"
+msgstr "Aangemaakt door"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_voip_configurator_create_date
+msgid "Created on"
+msgstr "Aangemaakt op"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_voip_configurator_display_name
+msgid "Display Name"
+msgstr "Naam weergeven"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_voip_configurator_id
+msgid "ID"
+msgstr "ID"
+
+#. module: voip
+#. openerp-web
+#: code:addons/voip/static/src/js/sip_js.js:90
+#, python-format
+msgid "Incomming call from "
+msgstr "Inkomende oproep van"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_invoice_warn
+msgid "Invoice"
+msgstr "Factuur"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_voip_configurator___last_update
+msgid "Last Modified on"
+msgstr "Laatst gewijzigd op"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_last_website_so_id
+msgid "Last Online Sale Order"
+msgstr "Laatste online verkooporder"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_voip_configurator_write_uid
+msgid "Last Updated by"
+msgstr "Laatst bijgewerkt door"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_voip_configurator_write_date
+msgid "Last Updated on"
+msgstr "Laatst bijgewerkt op"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_invoice_warn_msg
+msgid "Message for Invoice"
+msgstr "Bericht voor Factuur"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_purchase_warn_msg
+msgid "Message for Purchase Order"
+msgstr "Bericht voor inkooporder"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_sale_warn_msg
+msgid "Message for Sales Order"
+msgstr "Bericht voor verkooporder"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_picking_warn_msg
+msgid "Message for Stock Picking"
+msgstr "Bericht voor Picking"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_sip_ring_number
+msgid "Number of rings"
+msgstr "Aantal maal bellen"
+
+#. module: voip
+#. openerp-web
+#: code:addons/voip/static/src/js/sip_js.js:23
+#, python-format
+msgid "One or more parameter is missing. Please check your configuration."
+msgstr "Eén of meerdere parameters zijn niet ingesteld. Kijk uw instellingen na. "
+
+#. module: voip
+#: model:ir.ui.view,arch_db:voip.res_user_form
+#: model:ir.ui.view,arch_db:voip.view_voip_user_config
+msgid "PBX Configuration"
+msgstr "PBX configuratie"
+
+#. module: voip
+#. openerp-web
+#: code:addons/voip/static/src/js/sip_js.js:85
+#, python-format
+msgid "Please check your configuration.</br> (Reason receives :"
+msgstr "Controleer uw instellingen.</br> (Reden ontvangen:"
+
+#. module: voip
+#. openerp-web
+#: code:addons/voip/static/src/js/sip_js.js:209
+#, python-format
+msgid ""
+"Problem during the connection. Check if the application is allowed to access"
+" your microphone from your browser."
+msgstr "Probleem bij verbinding. Controleer of de toepassing gebruik mag maken van de microfoon van uw browser."
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_purchase_warn
+msgid "Purchase Order"
+msgstr "Inkooporder"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_sip_login
+msgid "SIP Login / Browser's Extension"
+msgstr "SIP login / Browser extensie"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_sip_password
+msgid "SIP Password"
+msgstr "SIP wachtwoord"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_sale_warn
+msgid "Sales Order"
+msgstr "Verkooporders"
+
+#. module: voip
+#: model:ir.model.fields,help:voip.field_res_users_invoice_warn
+#: model:ir.model.fields,help:voip.field_res_users_picking_warn
+#: model:ir.model.fields,help:voip.field_res_users_purchase_warn
+#: model:ir.model.fields,help:voip.field_res_users_sale_warn
+msgid ""
+"Selecting the \"Warning\" option will notify user with the message, "
+"Selecting \"Blocking Message\" will throw an exception with the message and "
+"block the flow. The Message has to be written in the next field."
+msgstr "Door de 'Waarschuwingsoptie' te selecteren wordt het bericht naar de gebruiker gestuurd. Door het 'Blokkerend bericht' te kiezen wordt een fout gegenereerd met de boodschap en het proces wordt geblokkeerd. Het bericht moet in het volgende veld worden ingevoerd."
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_picking_warn
+msgid "Stock Picking"
+msgstr "Stock Picking"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_sip_external_phone
+msgid "The extension of  your office's phone."
+msgstr "De extensie van uw kantoortelefoon."
+
+#. module: voip
+#: model:ir.model.fields,help:voip.field_res_users_sip_ring_number
+msgid "The number of rings before cancelling the call"
+msgstr "Het aantal malen dat de telefoon overgaat voor het gesprek wordt afgebroken"
+
+#. module: voip
+#. openerp-web
+#: code:addons/voip/static/src/js/sip_js.js:49
+#, python-format
+msgid ""
+"The server configuration could be wrong. Please check your configuration."
+msgstr "De serverinstellingen zijn mogelijk foutief ingesteld. Controleer uw instellingen."
+
+#. module: voip
+#. openerp-web
+#: code:addons/voip/static/src/js/sip_js.js:118
+#, python-format
+msgid ""
+"The user credentials could be wrong or the connection cannot be made. Please"
+" check your configuration.</br> (Reason receives :%d"
+msgstr "De gebruikersgegevens zijn mogelijk fout, of de verbinding kon niet tot stand komen. Controleer uw instellingen. </br> (Foutmelding: %d"
+
+#. module: voip
+#. openerp-web
+#: code:addons/voip/static/src/js/sip_js.js:44
+#, python-format
+msgid "The websocket uri could be wrong. Please check your configuration."
+msgstr "De websocket uri is mogelijk fout. Controleer uw instelligen."
+
+#. module: voip
+#: model:ir.model,name:voip.model_res_users
+msgid "Users"
+msgstr "Gebruikers"
+
+#. module: voip
+#: model:ir.model.fields,field_description:voip.field_res_users_website_tag_ids
+msgid "Website tags"
+msgstr "Website labels"
+
+#. module: voip
+#. openerp-web
+#: code:addons/voip/static/src/js/sip_js.js:201
+#, python-format
+msgid ""
+"Your browser could not support WebRTC. Please check your configuration."
+msgstr "Uw browser ondersteunt geen WebRTC. Kijk uw instellingen na."
+
+#. module: voip
+#. openerp-web
+#: code:addons/voip/static/src/js/sip_js.js:84
+#, python-format
+msgid "the connection cannot be made. "
+msgstr "de connectie kan niet worden gemaakt."
+
+#. module: voip
+#: model:ir.model,name:voip.model_voip_configurator
+msgid "voip.configurator"
+msgstr "voip.configurator"

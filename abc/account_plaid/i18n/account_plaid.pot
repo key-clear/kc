@@ -1,0 +1,106 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* account_plaid
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-02 14:39+0000\n"
+"PO-Revision-Date: 2015-11-02 14:39+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: account_plaid
+#: model:ir.model.fields,field_description:account_plaid.field_online_account_token
+msgid "Access Token"
+msgstr ""
+
+#. module: account_plaid
+#: code:addons/account_plaid/models/plaid.py:58
+#: code:addons/account_plaid/models/plaid.py:60
+#: code:addons/account_plaid/models/plaid.py:63
+#: code:addons/account_plaid/models/plaid.py:77
+#, python-format
+msgid "An error has occurred while trying to connect to plaid service"
+msgstr ""
+
+#. module: account_plaid
+#: model:ir.model,name:account_plaid.model_online_account
+msgid "Email Thread"
+msgstr ""
+
+#. module: account_plaid
+#: code:addons/account_plaid/models/plaid.py:143
+#, python-format
+msgid "Error in synchronization"
+msgstr ""
+
+#. module: account_plaid
+#: code:addons/account_plaid/models/plaid.py:150
+#, python-format
+msgid "Error with Plaid.com"
+msgstr ""
+
+#. module: account_plaid
+#: model:ir.model,name:account_plaid.model_account_journal
+msgid "Journal"
+msgstr ""
+
+#. module: account_plaid
+#: model:ir.model.fields,field_description:account_plaid.field_account_journal_onlinesync_config_plaid_account_id
+msgid "Online Account"
+msgstr ""
+
+#. module: account_plaid
+#: model:ir.model.fields,field_description:account_plaid.field_online_account_plaid_id
+msgid "Plaid Account"
+msgstr ""
+
+#. module: account_plaid
+#: model:ir.model.fields,field_description:account_plaid.field_account_config_settings_plaid_id
+msgid "Plaid ID"
+msgstr ""
+
+#. module: account_plaid
+#: model:ir.model.fields,field_description:account_plaid.field_account_config_settings_plaid_secret
+msgid "Plaid Secret"
+msgstr ""
+
+#. module: account_plaid
+#: code:addons/account_plaid/models/plaid.py:144
+#, python-format
+msgid "The synchronization of the journal %s with the plaid account %s has failed.<br>The error message is :<br>%s"
+msgstr ""
+
+#. module: account_plaid
+#: code:addons/account_plaid/models/plaid.py:151
+#, python-format
+msgid "The synchronization with Plaid.com failed. Please check the error : <br> %s"
+msgstr ""
+
+#. module: account_plaid
+#: code:addons/account_plaid/models/plaid.py:42
+#, python-format
+msgid "You haven't configure your plaid account, please go to accounting/settings to configure it"
+msgstr ""
+
+#. module: account_plaid
+#: model:ir.model,name:account_plaid.model_account_config_settings
+msgid "account.config.settings"
+msgstr ""
+
+#. module: account_plaid
+#: model:ir.model,name:account_plaid.model_account_journal_onlinesync_config
+msgid "account.journal.onlinesync.config"
+msgstr ""
+
+#. module: account_plaid
+#: model:ir.model,name:account_plaid.model_online_institution
+msgid "online.institution"
+msgstr ""
+

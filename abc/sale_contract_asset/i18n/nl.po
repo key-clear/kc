@@ -1,0 +1,35 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * sale_contract_asset
+# 
+# Translators:
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-09-07 14:52+0000\n"
+"PO-Revision-Date: 2015-09-15 13:24+0000\n"
+"Last-Translator: Yenthe Van Ginneken <yenthespam@gmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/odoo/odoo-9/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: sale_contract_asset
+#: model:ir.model.fields,field_description:sale_contract_asset.field_sale_subscription_asset_category_id
+msgid "Deferred Revenue Category"
+msgstr "Uitgestelde inkomsten categorie"
+
+#. module: sale_contract_asset
+#: model:ir.model,name:sale_contract_asset.model_sale_subscription
+msgid "Sale Subscription"
+msgstr "Verkoop abbonnement"
+
+#. module: sale_contract_asset
+#: model:ir.model.fields,help:sale_contract_asset.field_sale_subscription_asset_category_id
+msgid ""
+"This asset category will be applied to the lines of the contract's invoices."
+msgstr "Deze asset categorie wordt toegepast op de lijnen van de contractfacturen."

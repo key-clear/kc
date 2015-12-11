@@ -1,0 +1,13 @@
+<odoo>
+  <!-- Inherited Analytic Account form for contracts -->
+  <record id="sale_subscription_view_form_inherit_sale_contract_asset" model="ir.ui.view">
+      <field name="name">sale.subscription.form.view.inherit</field>
+      <field name="model">sale.subscription</field>
+      <field name="inherit_id" ref="sale_contract.sale_subscription_view_form"/>
+      <field name="arch" type="xml">
+        <xpath expr='//notebook/page[@id="settings"]/group' position='inside'>
+            <field name="asset_category_id" context="{'default_type':'sale'}"/>
+        </xpath>
+      </field>
+    </record>
+  </odoo>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+    <template id="assets_backend" name="account online sync assets" inherit_id="web.assets_backend">
+      <xpath expr="." position="inside">
+        <script type="text/javascript" src="/account_online_sync/static/src/js/online_sync.js"/>
+      </xpath>
+    </template>
+
+    <record id="online_account_form" model="ir.ui.view">
+            <field name="name">online.account.form</field>
+            <field name="model">online.account</field>
+            <field name="priority">2</field>
+            <field name="arch" type="xml">
+                <form string="Online Account" create="false" edit="false">
+                <sheet string="Online Account">
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="journal_id"/>
+                        </group>
+                        <group>
+                            <field name="last_sync"/>
+                            <field name="institution_id"/>
+                        </group>
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+                </form>
+            </field>
+        </record>
+
+    <record id="view_config_online_sync_journal_form" model="ir.ui.view">
+            <field name="name">account.config.online.sync.journal.form</field>
+            <field name="model">account.journal.onlinesync.config</field>
+            <field name="arch" type="xml">
+                <form string="Online Sync configuration" version="7">
+                    <div class="oe_title">
+                        <label for="name" required="1" class="oe_edit_only"/>
+                        <h2><field name="journal_id" required="1"/></h2>
+                    </div>
+                    <group>
+                      <field name="online_institution_id" options="{'no_create': True}" attrs="{'readonly': [('online_account_id', '!=', False)]}"/>
+                      <field name="online_id" invisible="1"/>
+                      <field name="online_type" invisible="1"/>
+                      <field name="online_account_id" invisible="1"/>
+                    </group>
+                <footer>
+                    <button name="online_sync"
+                      string="Synchronize"
+                      type="object"
+                                  class="btn-primary"
+                      attrs="{'invisible': [('online_account_id', '=', False)]}"/>
+                    <button name="remove_online_account"
+                      string="Remove online account"
+                      type="object"
+                                  class="btn-default"
+                      attrs="{'invisible': [('online_account_id', '=', False)]}"/>
+                    <button class="btn-default oe_inline" type="object" name="fetch_all_institution" string="Update online institutions (may be slow)" groups="base.group_no_one"/>
+                    <button string="Close" class="btn-default" special="cancel"/>
+                </footer>
+               </form>
+            </field>
+        </record>
+
+    <record id="action_config_online_sync_journal_form" model="ir.actions.act_window">
+        <field name="name">Online Synchronisation</field>
+        <field name="res_model">account.journal.onlinesync.config</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_config_online_sync_journal_form"/>
+        <field name="target">new</field>
+    </record>
+
+    <record id="account_journal_dashboard_inherit_online_sync" model="ir.ui.view">
+      <field name="name">account.journal.dashboard.inherit.online.sync</field>
+      <field name="model">account.journal</field>
+      <field name="inherit_id" ref="account.account_journal_dashboard_kanban_view"/>
+      <field name="arch" type="xml">
+        <field name="kanban_dashboard" position="after">
+          <field name="next_synchronization"/>
+          <field name="online_account_id"/>
+        </field>
+        <xpath expr='//div[@name="bank_journal_default_cta"]/button' position='after'>
+          <br t-if="dashboard.number_to_reconcile == 0"/><button t-if="dashboard.number_to_reconcile == 0" type="action" name="%(action_config_online_sync_journal_form)d" class="btn btn-primary btn-sm">Online synchronization</button>
+          <a t-if="dashboard.number_to_reconcile > 0" type="action" name="%(action_config_online_sync_journal_form)d" class="oe_inline">Online synchronization</a>
+        </xpath>
+        <xpath expr='//div[@name="bank_journal_cta"]' position='inside'>
+          <t t-if="dashboard.bank_statements_source == 'online_sync'">
+            <button t-if="dashboard.number_to_reconcile == 0" attrs="{'invisible': [('online_account_id', '!=', False)]}" type="action" name="%(action_config_online_sync_journal_form)d" class="btn btn-primary btn-sm">Online synchronization</button>
+            <a t-if="dashboard.number_to_reconcile > 0" attrs="{'invisible': [('online_account_id', '!=', False)]}" type="action" name="%(action_config_online_sync_journal_form)d" class="oe_inline">Online synchronization</a>
+            <button t-if="dashboard.number_to_reconcile == 0" attrs="{'invisible': [('online_account_id', '=', False)]}" type="object" name="online_sync" class="btn btn-primary btn-sm">Online synchronization</button>
+            <a t-if="dashboard.number_to_reconcile > 0" attrs="{'invisible': [('online_account_id', '=', False)]}" type="object" name="online_sync" class="oe_inline">Online synchronization</a>
+          </t>
+        </xpath>
+        <xpath expr="//div[contains(@class, 'o_kanban_primary_left')]" position="inside">
+          <span class="text-muted" t-if="(record.online_account_id.value != '')" t-att-title="record.next_synchronization.value">Next sync: <t t-esc="record.next_synchronization.value"/></span>
+        </xpath>
+      </field>
+    </record>
+
+     <record id="account_journal_form_inherit_online_sync" model="ir.ui.view">
+      <field name="name">account.journal.form.inherit.online.sync</field>
+      <field name="model">account.journal</field>
+      <field name="inherit_id" ref="account.view_account_journal_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//page[@name='advanced_settings']/group" position="inside">
+          <group string="Online Synchronization">
+          <button string="Configure" type="action" name="%(action_config_online_sync_journal_form)d" class="btn btn-primary btn-sm"/>
+          </group>
+        </xpath>
+      </field>
+    </record>
+
+    <!-- Cron to synchronize transaction -->
+    <record id="online_sync_cron" model="ir.cron">
+      <field name="name">online.sync.gettransaction.cron</field>
+      <field name="active" eval="True"/>
+      <field name="user_id" ref="base.user_root"/>
+      <field name="interval_number">4</field>
+      <field name="interval_type">hours</field>
+      <field name="numbercall">-1</field>
+      <field name="doall" eval="False"/>
+      <field name="model">account.journal</field>
+      <field name="function">launch_online_sync</field>
+      <field name="args">()</field>
+    </record>
+
+  </data>
+</openerp>

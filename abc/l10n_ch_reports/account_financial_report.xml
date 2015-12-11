@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="financial_report_l10n_ch" model="account.financial.html.report">
+        <field name="name">VAT</field>
+        <field name="report_type">date_range</field>
+        <field name='parent_id' ref='l10n_ch.account_reports_ch_statements_menu'/>
+    </record>
+    <record id="financial_report_line_ch_01" model="account.financial.html.report.line">
+        <field name="name">500 Solde de TVA a payer a l'AFC</field>
+        <field name="code">CHTAX_500</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = CHTAX_399.balance + CHTAX_479.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_ch"/>
+    </record>
+    <record id="financial_report_line_ch_0101" model="account.financial.html.report.line">
+        <field name="name">399 TVA Due </field>
+        <field name="code">CHTAX_399</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = CHTAX_301b.balance + CHTAX_311b.balance + CHTAX_341b.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_01"/>
+    </record>
+    <record id="financial_report_line_ch_010101" model="account.financial.html.report.line">
+        <field name="name">301b TVA due a 8.0% (TN)</field>
+        <field name="code">CHTAX_301b</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.tag_8')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_0101"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_010102" model="account.financial.html.report.line">
+        <field name="name">311b TVA due a 2.5% (TR)</field>
+        <field name="code">CHTAX_311b</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.tag_2_5')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_0101"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_010103" model="account.financial.html.report.line">
+        <field name="name">341b TVA due a 3.8% (TS)</field>
+        <field name="code">CHTAX_341b</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.tag_3_8')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_0101"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_0102" model="account.financial.html.report.line">
+        <field name="name">479 TVA préalable sur acquisitions (a récupérer)</field>
+        <field name="code">CHTAX_479</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = CHTAX_400.balance + CHTAX_405.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_01"/>
+    </record>
+    <record id="financial_report_line_ch_010201" model="account.financial.html.report.line">
+        <field name="name">400 TVA préalable sur biens et services</field>
+        <field name="code">CHTAX_400</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="['|', ('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_100%_imp')]), ('tax_line_id.tag_ids', 'in', [ref('l10n_ch.tag_0_import'), ref('l10n_ch.tag_8_achat'), ref('l10n_ch.tag_2_5_achat'), ref('l10n_ch.tag_3_8_achat')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_0102"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_010202" model="account.financial.html.report.line">
+        <field name="name">405 TVA préalable sur invest. et autres ch.</field>
+        <field name="code">CHTAX_405</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_ch.tag_8_invest'), ref('l10n_ch.tag_2_5_invest'), ref('l10n_ch.tag_3_8_invest')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_0102"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_02" model="account.financial.html.report.line">
+        <field name="name">Base de calcul de TVA</field>
+        <field name="code">CHTAX_TVA</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = CHTAX_200.balance + CHTAX_Acquisition_Total.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_ch"/>
+    </record>
+    <record id="financial_report_line_ch_0201" model="account.financial.html.report.line">
+        <field name="name">200 Chiffre d'affaires - total</field>
+        <field name="code">CHTAX_200</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = CHTAX_200_220.balance + CHTAX_200_230.balance + CHTAX_299.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_02"/>
+    </record>
+    <record id="financial_report_line_ch_020101" model="account.financial.html.report.line">
+        <field name="name">200 - 220 Chiffre d'affaires imposable a 0% (export)</field>
+        <field name="code">CHTAX_200_220</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_0%')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_0201"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_020102" model="account.financial.html.report.line">
+        <field name="name">200 - 230 Chiffre d'affaires non-imposable a 0% (exclu)</field>
+        <field name="code">CHTAX_200_230</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_0%_excl')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_0201"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_020103" model="account.financial.html.report.line">
+        <field name="name">299 Chiffre d'affaires imposable</field>
+        <field name="code">CHTAX_299</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = CHTAX_301a.balance + CHTAX_311a.balance + CHTAX_341a.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_0201"/>
+    </record>
+    <record id="financial_report_line_ch_02010301" model="account.financial.html.report.line">
+        <field name="name">301a Chiffre d'affaires imposable a 8.0% (TN)</field>
+        <field name="code">CHTAX_301a</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_8')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_020103"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_02010302" model="account.financial.html.report.line">
+        <field name="name">311a Chiffre d'affaires imposable a 2.5% (TR)</field>
+        <field name="code">CHTAX_311a</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_2_5')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_020103"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_02010303" model="account.financial.html.report.line">
+        <field name="name">341a Chiffre d'affaires imposable a 3.8% (TS)</field>
+        <field name="code">CHTAX_341a</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_3_8')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_020103"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_0202" model="account.financial.html.report.line">
+        <field name="name">Acquisition - total</field>
+        <field name="code">CHTAX_Acquisition_Total</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = CHTAX_Babs.balance + CHTAX_Binv.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_02"/>
+    </record>
+    <record id="financial_report_line_ch_020201" model="account.financial.html.report.line">
+        <field name="name">Acquisition de biens et services</field>
+        <field name="code">CHTAX_Babs</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = CHTAX_Babs0.balance + CHTAX_Babs25.balance + CHTAX_Babs38.balance + CHTAX_Babs8.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_0202"/>
+    </record>
+    <record id="financial_report_line_ch_02020101" model="account.financial.html.report.line">
+        <field name="name">Acquisition de biens et services a 0%</field>
+        <field name="code">CHTAX_Babs0</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_0_import')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_020201"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_02020102" model="account.financial.html.report.line">
+        <field name="name">Acquisition de biens et services a 2.5% (TR)</field>
+        <field name="code">CHTAX_Babs25</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_2_5_achat')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_020201"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_02020103" model="account.financial.html.report.line">
+        <field name="name">Acquisition de biens et services a 3.8% (TS)</field>
+        <field name="code">CHTAX_Babs38</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_3_8_achat')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_020201"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_02020104" model="account.financial.html.report.line">
+        <field name="name">Acquisition de biens et services a 8.0% (TN)</field>
+        <field name="code">CHTAX_Babs8</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_8_achat')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_020201"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_020202" model="account.financial.html.report.line">
+        <field name="name">Acquisition de biens d'invest. et autres charges</field>
+        <field name="code">CHTAX_Binv</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = CHTAX_Binv25.balance + CHTAX_Binv38.balance + CHTAX_Binv8.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_0202"/>
+    </record>
+    <record id="financial_report_line_ch_02020201" model="account.financial.html.report.line">
+        <field name="name">Acquisition de biens d'invest. et autres charges a 2.5% (TR)</field>
+        <field name="code">CHTAX_Binv25</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_2_5_invest')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_020202"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_02020202" model="account.financial.html.report.line">
+        <field name="name">Acquisition de biens d'invest. et autres charges a 3.8% (TS)</field>
+        <field name="code">CHTAX_Binv38</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_3_8_invest')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_020202"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_ch_02020203" model="account.financial.html.report.line">
+        <field name="name">Acquisition de biens d'invest. et autres charges a 8.0% (TN)</field>
+        <field name="code">CHTAX_Binv8</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_ch.tag_8_invest')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_ch_020202"/>
+        <field name="show_domain">never</field>
+    </record>
+
+</odoo>

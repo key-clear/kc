@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- Call Function to delete ir.model.data of yodlee online.institution
+    		We need this because we removed the loading of the csv by the orm and we perform it
+    		now only once at module installation. So we have to delete ir.model.data for previous
+    		user to prevent the orm to delete everything
+    	-->
+    <function model="online.institution" name="_migrate_online_institution" eval="[], {}"/>
+
+</odoo>

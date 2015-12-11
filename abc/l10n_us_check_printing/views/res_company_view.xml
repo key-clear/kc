@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <record id="view_res_company_form_inherited" model="ir.ui.view">
+            <field name="name">res.company.form.inherited</field>
+            <field name="model">res.company</field>
+            <field name="inherit_id" ref="base.view_company_form"/>
+            <field name="arch" type="xml">
+                <group name="account_grp" position="after">
+                    <group name="us_check_printing" string="US Check Printing">
+                        <field name="us_check_layout"/>
+                        <field name="us_check_multi_stub"/>
+                        <label for="us_check_margin_top"/>
+                        <div>
+                            <field name="us_check_margin_top" class="oe_inline"/>
+                            <label string="in" class="oe_inline" />
+                        </div>
+                        <label for="us_check_margin_left"/>
+                        <div>
+                            <field name="us_check_margin_left" class="oe_inline"/>
+                            <label string="in" class="oe_inline" />
+                        </div>
+                    </group>
+                </group>
+            </field>
+        </record>
+    </data>
+</openerp>

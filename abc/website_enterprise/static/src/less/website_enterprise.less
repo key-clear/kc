@@ -1,0 +1,59 @@
+.o_menu_toggle {
+    float: left;
+    padding: 4px 0 0 16px;
+    font-size: 1.3em;
+    color: white;
+
+    &:hover, &:focus, &:active {
+        color: white;
+        outline: none;
+    }
+}
+
+.o_web_client { // Here are the rules which are not imported from backend
+    .o-flex-display();
+    .o-flex-flow(column, nowrap);
+    height: 100%;
+    font-family: Roboto;
+    font-size: @odoo-font-size-base;
+
+    .navbar {
+        .o-flex(0, 0, auto);
+        min-height: @odoo-navbar-height;
+        margin-bottom: 0;
+        background-color: @odoo-brand-primary;
+        border-color: @odoo-navbar-inverse-link-hover-bg;
+        
+        .o_back_button {
+            font-size: 17px;
+            line-height: 18px;
+            height: @odoo-navbar-height;
+            padding-top: 13px;
+            padding-bottom: 13px;
+            color: white;
+            &:hover {
+                background-color: @odoo-navbar-inverse-link-hover-bg;
+            }
+        }
+
+        .o_user_menu {
+            > a {
+                padding: 13px 10px;
+                line-height: 18px;
+                &:hover, &:focus {
+                    background-color: @odoo-navbar-inverse-link-hover-bg;
+                }
+            }
+            &.open > a {
+                background-color: @odoo-navbar-inverse-link-hover-bg;
+            }
+
+            .dropdown-menu {
+                font-size: @odoo-font-size-base;
+                > li > a {
+                    color: #333;
+                }
+            }
+        }
+    }
+}

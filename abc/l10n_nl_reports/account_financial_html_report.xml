@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="financial_report_l10n_nl" model="account.financial.html.report">
+        <field name="name">Nederlands BTW Plan</field>
+        <field name="report_type">date_range</field>
+        <field name='parent_id' ref='l10n_nl.account_reports_nl_statements_menu'/>
+    </record>
+    <record id="financial_report_line_nl_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A</field>
+        <field name="name">Gegevens omzetbedragen</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = NLTAX_A1.balance + NLTAX_A2.balance + NLTAX_A3.balance + NLTAX_A4.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_nl"/>
+    </record>
+    <record id="financial_report_line_nl_01_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A1</field>
+        <field name="name">Leveringen en/of diensten binnenland (omzet)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = NLTAX_A1a.balance + NLTAX_A1b.balance + NLTAX_A1c.balance + NLTAX_A1d.balance + NLTAX_A1e.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01"/>
+    </record>
+    <record id="financial_report_line_nl_01_01_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A1a</field>
+        <field name="name">Leveringen/diensten belast met 21% (omzet)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_3')])]"/>
+        <field name="formulas">balance = - sum.balance + NLTAX_A1aa.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_01_01_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A1aa</field>
+        <field name="name">Leveringen/diensten belast met 21% (omzet)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_4')]), ('credit', '>', 0)]"/>
+        <field name="formulas">balance = sum.credit</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_01_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_01_02" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A1b</field>
+        <field name="name">Leveringen/diensten belast met 6% (omzet)</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_2')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_01_03" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A1c</field>
+        <field name="name">Leveringen/diensten belast met overige tarieven behalve 0% (omzet)</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_4')]), ('debit', '>', 0)]"/>
+        <field name="formulas">balance = - sum.debit</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_01_04" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A1d</field>
+        <field name="name">Prive-gebruik (omzet)</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_01_05" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A1e</field>
+        <field name="name">Leveringen/diensten belast met 0% of niet bij u belast (omzet)</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_1'), ref('l10n_nl.tax_tag_8')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_02" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A2</field>
+        <field name="name">Verleggingsregelingen: BTW naar u verlegd (omzet)</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = NLTAX_A2a.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01"/>
+    </record>
+    <record id="financial_report_line_nl_01_02_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A2a</field>
+        <field name="name">Heffing van omzetbelasting is naar u verlegd (omzet)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_11')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_02"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_03" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A3</field>
+        <field name="name">Leveringen naar het buitenland (omzet)</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = NLTAX_A3a.balance + NLTAX_A3b.balance + NLTAX_A3c.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01"/>
+    </record>
+    <record id="financial_report_line_nl_01_03_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A3a</field>
+        <field name="name">Leveringen naar landen buiten de EU (uitvoer) (omzet)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_32')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_03"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_03_02" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A3b</field>
+        <field name="name">Leveringen naar landen binnen de EU (omzet)</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_21')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_03"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_03_03" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A3c</field>
+        <field name="name">Installatie/afstandsverkopen binnen de EU (omzet)</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_22')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_03"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_04" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A4</field>
+        <field name="name">Leveringen vanuit het buitenland (omzet)</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = NLTAX_A4a.balance + NLTAX_A4b.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01"/>
+    </record>
+    <record id="financial_report_line_nl_01_04_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A4a</field>
+        <field name="name">Leveringen uit landen buiten de EU (invoer) (omzet)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_25'), ref('l10n_nl.tax_tag_28'), ref('l10n_nl.tax_tag_31')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_04"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_01_04_02" model="account.financial.html.report.line">
+        <field name="code">NLTAX_A4b</field>
+        <field name="name">Verwerving van goederen uit landen binnen de EU (omzet)</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_nl.tax_tag_14'), ref('l10n_nl.tax_tag_17'), ref('l10n_nl.tax_tag_20')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_01_04"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B</field>
+        <field name="name">Gegevens omzetbelasting (BTW)</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="0"/>
+        <field name="formulas">balance = NLTAX_B1.balance + NLTAX_B2.balance + NLTAX_B4.balance + NLTAX_B5.balance</field>
+        <field name="financial_report_id" ref="financial_report_l10n_nl"/>
+    </record>
+    <record id="financial_report_line_nl_02_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B1</field>
+        <field name="name">Leveringen en/of diensten binnenland (BTW)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = NLTAX_B1a.balance + NLTAX_B1b.balance + NLTAX_B1c.balance + NLTAX_B1d.balance + NLTAX_B1e.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02"/>
+    </record>
+    <record id="financial_report_line_nl_02_01_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B1a</field>
+        <field name="name">Leveringen/diensten belast met 21% (BTW)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_nl.tax_tag_3')])]"/>
+        <field name="formulas">balance = - sum.balance + NLTAX_B1aa.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_01_01_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B1aa</field>
+        <field name="name">Leveringen/diensten belast met 21% (BTW)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="3"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_nl.tax_tag_4')]), ('credit', '>', 0)]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_01_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_01_02" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B1b</field>
+        <field name="name">Leveringen/diensten belast met 6% (BTW)</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_nl.tax_tag_2')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_01_03" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B1c</field>
+        <field name="name">Leveringen/diensten belast met overige tarieven behalve 0% (BTW)</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_nl.tax_tag_4')]), ('debit', '>', 0)]"/>
+        <field name="formulas">balance = - sum.debit</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_01_04" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B1d</field>
+        <field name="name">Prive-gebruik (BTW)</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_01_05" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B1e</field>
+        <field name="name">Leveringen/diensten belast met 0% of niet bij u belast (BTW)</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_01"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_02" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B2</field>
+        <field name="name">Verleggingsregelingen: BTW naar u verlegd (BTW)</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = NLTAX_B2a.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02"/>
+    </record>
+    <record id="financial_report_line_nl_02_02_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B2a</field>
+        <field name="name">Heffing van omzetbelasting is naar u verlegd (BTW)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_nl.tax_tag_9')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_02"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_03" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B4</field>
+        <field name="name">Leveringen vanuit het buitenland (BTW)</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = NLTAX_B4a.balance + NLTAX_B4b.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02"/>
+    </record>
+    <record id="financial_report_line_nl_02_03_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B4a</field>
+        <field name="name">Leveringen uit landen buiten de EU (invoer) (BTW)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_nl.tax_tag_23'), ref('l10n_nl.tax_tag_26'), ref('l10n_nl.tax_tag_29')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_03"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_03_02" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B4b</field>
+        <field name="name">Verwerving van goederen uit landen binnen de EU (BTW)</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_nl.tax_tag_12'), ref('l10n_nl.tax_tag_15'), ref('l10n_nl.tax_tag_18')])]"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_03"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_04" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B5</field>
+        <field name="name">Voorbelasting, kleineondernemersregeling, schatting en eindtotaal (BTW)</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="1"/>
+        <field name="formulas">balance = NLTAX_B5a.balance + NLTAX_B5b.balance + NLTAX_B5c.balance + NLTAX_B5d.balance + NLTAX_B5e.balance + NLTAX_B5f.balance + NLTAX_B5g.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02"/>
+    </record>
+    <record id="financial_report_line_nl_02_04_01" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B5a</field>
+        <field name="name">Verschuldigde omzetbelasting (rubrieken 1a t/m 4b) (BTW)</field>
+        <field name="sequence" eval="1"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_04"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_04_02" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B5b</field>
+        <field name="name">Voorbelasting (BTW)</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_nl.tax_tag_5'), ref('l10n_nl.tax_tag_6'), ref('l10n_nl.tax_tag_7'), ref('l10n_nl.tax_tag_13'), ref('l10n_nl.tax_tag_16'), ref('l10n_nl.tax_tag_19'), ref('l10n_nl.tax_tag_24'), ref('l10n_nl.tax_tag_30')])]"/>
+        <field name="formulas">balance = sum.balance + NLTAX_B5bb.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_04"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_04_02b" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B5bb</field>
+        <field name="name">Voorbelasting (BTW) bis</field>
+        <field name="sequence" eval="2"/>
+        <field name="level" eval="2"/>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_nl.tax_tag_27'), ref('l10n_nl.tax_tag_10')])]"/>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_04_03" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B5c</field>
+        <field name="name">Subtotaal (rubriek 5a min 5b) (BTW)</field>
+        <field name="sequence" eval="3"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_04"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_04_04" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B5d</field>
+        <field name="name">Vermindering volgens de kleineondernemersregeling (BTW)</field>
+        <field name="sequence" eval="4"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_04"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_04_05" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B5e</field>
+        <field name="name">Schatting vorige aangifte(n) (BTW)</field>
+        <field name="sequence" eval="5"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_04"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_04_06" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B5f</field>
+        <field name="name">Schatting deze aangifte (BTW)</field>
+        <field name="sequence" eval="6"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_04"/>
+        <field name="show_domain">never</field>
+    </record>
+    <record id="financial_report_line_nl_02_04_07" model="account.financial.html.report.line">
+        <field name="code">NLTAX_B5g</field>
+        <field name="name">Totaal te betalen/terug te vragen (BTW)</field>
+        <field name="sequence" eval="7"/>
+        <field name="level" eval="2"/>
+        <field name="formulas">balance = sum.balance</field>
+        <field name="parent_id" ref="financial_report_line_nl_02_04"/>
+        <field name="show_domain">never</field>
+    </record>
+
+</odoo>

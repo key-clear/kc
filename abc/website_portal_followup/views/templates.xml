@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>    
+    <template inherit_id="website_portal.account" id="account">
+        <xpath expr="//div[contains(@class,'o_my_documents')]">
+            <t t-call="account_reports.report_followup_public"/>
+        </xpath>
+    </template>
+</odoo>

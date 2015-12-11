@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="account_financial_report_l10n_at_tva0" model="account.financial.html.report">
+        <field name="name">Steuern AT</field>
+        <field name="report_type">date_range</field>
+        <field name='parent_id' ref='l10n_at.account_reports_at_statements_menu'/>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line1" model="account.financial.html.report.line">
+        <field name="name">UST Vorauszahlung / Überschuss - bitte dem Betrag ein Minuszeichen voranstellen</field>
+        <field name="code">ATTAX095</field>
+        <field name="sequence" eval="2"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_at_tva0"/>
+        <field name="level" eval="0" />
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line2" model="account.financial.html.report.line">
+        <field name="name">Steuern</field>
+        <field name="code">ATTAXST</field>
+        <field name="formulas">balance = ATTAX10.balance + ATTAX18.balance + ATTAX36.balance</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line1"/>
+        <field name="level" eval="1" />
+        <field name="formulas">balance = ATTAX065.balance+ATTAX01.balance+ATTAX02.balance</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line3" model="account.financial.html.report.line">
+        <field name="name">Vorsteuer aus innergemeinschaftlichem Erwerb</field>
+        <field name="code">ATTAX065</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line2"/>
+        <field name="level" eval="2" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_at.tax_10%_VSt'), ref('l10n_at.tax_20%_VSt')])]" />
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line4" model="account.financial.html.report.line">
+        <field name="name">Innergemeinschaftliche Erwerbe</field>
+        <field name="code">ATTAX01</field>
+        <field name="formulas">balance = ATTAX20.balance</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line2"/>
+        <field name="level" eval="2" />
+        <field name="formulas">balance = ATTAX02.balance</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line5" model="account.financial.html.report.line">
+        <field name="name">Steuerpflichtige Umsätze (Lieferungen, sonstige Leistungen und Eigenverbrauch)</field>
+        <field name="code">ATTAX02</field>
+        <field name="formulas">balance = ATTAX22.balance + ATTAX24.balance</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line4"/>
+        <field name="level" eval="3" />
+        <field name="formulas">balance = ATTAX072UST.balance+ATTAX073UST.balance+ATTAX073USTBMG.balance+ATTAX072USTBMG.balance</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line6" model="account.financial.html.report.line">
+        <field name="name">zum Steuersatz von 20 %</field>
+        <field name="code">ATTAX072UST</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line5"/>
+        <field name="level" eval="4" />
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_at.tax_20%_VSt')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="show_domain">never</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line6_" model="account.financial.html.report.line">
+        <field name="name">BMGzum Steuersatz von 20 %</field>
+        <field name="code">ATTAX072USTBMG</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line5"/>
+        <field name="level" eval="4" />
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_at.tax_20%_VSt'), ref('l10n_at.tax_innergem_Erwerb_20%')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line7" model="account.financial.html.report.line">
+        <field name="name">zum Steuersatz von 10 %</field>
+        <field name="code">ATTAX073UST</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line5"/>
+        <field name="level" eval="4" />
+         <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_at.tax_10%_VSt')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="show_domain">never</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line7_1" model="account.financial.html.report.line">
+        <field name="name">BMGzum Steuersatz von 10 %</field>
+        <field name="code">ATTAX073USTBMG</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line5"/>
+        <field name="level" eval="4" />
+         <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_at.tax_10%_VSt'), ref('l10n_at.tax_innergem_Erwerb_10%')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line8" model="account.financial.html.report.line">
+        <field name="name">Lieferungen, sonstige Leistungen und Eigenverbrauch</field>
+        <field name="code">ATTAX03</field>
+        <field name="formulas">balance = ATTAX12.balance</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line2"/>
+        <field name="level" eval="2" />
+        <field name="formulas">balance = ATTAX04.balance</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line9" model="account.financial.html.report.line">
+        <field name="name">Steuerpflichtige Umsätze (Lieferungen, sonstige Leistungen und Eigenverbrauch)</field>
+        <field name="code">ATTAX04</field>
+        <field name="formulas">balance = ATTAX022UST.balance + ATTAX029UST.balance</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line8"/>
+        <field name="level" eval="3" />
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line10" model="account.financial.html.report.line">
+        <field name="name">zum Steuersatz von 20 %</field>
+        <field name="code">ATTAX022UST</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line9"/>
+        <field name="level" eval="4" />
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_at.tax_20%_USt_EU'), ref('l10n_at.tax_20%_MwSt')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line11" model="account.financial.html.report.line">
+        <field name="name">zum Steuersatz von 10%</field>
+        <field name="code">ATTAX029UST</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line9"/>
+        <field name="level" eval="4" />
+        <field name="domain" eval="[('tax_line_id.tag_ids', 'in', [ref('l10n_at.tax_10%_USt_EU'), ref('l10n_at.tax_10%_MwSt')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="show_domain">never</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line12" model="account.financial.html.report.line">
+        <field name="name">Bemessungsgrundlage</field>
+        <field name="code">ATTAX05</field>
+        <field name="sequence" eval="1"/>
+        <field name="financial_report_id" ref="account_financial_report_l10n_at_tva0"/>
+        <field name="level" eval="0" />
+        <field name="formulas">balance = ATTAXBMG.balance + ATTAX07.balance</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line13" model="account.financial.html.report.line">
+        <field name="name">Steuern</field>
+        <field name="code">ATTAXBMG</field>
+        <field name="formulas">balance = ATTAX19.balance + ATTAX31.balance</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line12"/>
+        <field name="level" eval="1" />
+        <field name="formulas">balance = ATTAX000.balance</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line14" model="account.financial.html.report.line">
+        <field name="name">Lieferungen und sonstige Leistungen (einschließlich unentgeltlicher Wertabgaben)</field>
+        <field name="code">ATTAX000</field>
+        <field name="formulas">balance = ATTAX32.balance</field>
+        <field name="sequence" eval="3"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line13"/>
+        <field name="level" eval="2" />
+        <field name="formulas">balance = ATTAX06.balance + ATTAX070BMG.balance</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line15" model="account.financial.html.report.line">
+        <field name="name">Steuerfreie Umsätze mit Vorsteuerabzug</field>
+        <field name="code">ATTAX06</field>
+        <field name="formulas">balance = ATTAX011.balance + ATTAX017.balance</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line14"/>
+        <field name="level" eval="3" />
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line34" model="account.financial.html.report.line">
+        <field name="name">§ 6 Abs. 1 Z 1 iVm § 7 (Ausfuhrlieferungen)</field>
+        <field name="code">ATTAX011</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line15"/>
+        <field name="level" eval="4" />
+        <field name="show_domain">never</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_at.tax_steuerfreie_Ausfuhr')])]" />
+        <field name="formulas">balance = - sum.balance</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line35" model="account.financial.html.report.line">
+        <field name="name">Art. 6 Abs. 1 (Innergemeinschaftliche Lieferungen)</field>
+        <field name="code">ATTAX017</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line15"/>
+        <field name="level" eval="4" />
+        <field name="show_domain">never</field>
+        <field name="formulas">balance = - sum.balance</field>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_at.tax_strf_i_g_L')])]" />
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line20" model="account.financial.html.report.line">
+        <field name="name">Innergemeinschaftliche Erwerbe</field>
+        <field name="code">ATTAX070BMG</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line14"/>
+        <field name="level" eval="2" />
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line21" model="account.financial.html.report.line">
+        <field name="name">Vorsteuer (dient lediglich der Verprobung)</field>
+        <field name="code">ATTAX07</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line12"/>
+        <field name="level" eval="1" />
+        <field name="formulas">balance = ATTAX08.balance + ATTAX11.balance</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line22" model="account.financial.html.report.line">
+        <field name="name">Einfuhren</field>
+        <field name="code">ATTAX08</field>
+        <field name="formulas">balance = ATTAX09.balance + ATTAX10.balance</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line21"/>
+        <field name="level" eval="2" />
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line23" model="account.financial.html.report.line">
+        <field name="name">Einfuhren zum Steuersatz von 10 %</field>
+        <field name="code">ATTAX09</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line22"/>
+        <field name="level" eval="3" />
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_at.tax_10%_EUSt')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="show_domain">never</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line24" model="account.financial.html.report.line">
+        <field name="name">Einfuhren zum Steuersatz von 20 %</field>
+        <field name="code">ATTAX10</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line22"/>
+        <field name="level" eval="3" />
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_at.tax_20%_EUSt')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="show_domain">never</field>
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line25" model="account.financial.html.report.line">
+        <field name="name">Rechnungen von anderen Unternehmern und innergemeinschaftliche Dreiecksgeschäfte</field>
+        <field name="code">ATTAX11</field>
+        <field name="formulas">balance = ATTAX12.balance + ATTAX13.balance</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line21"/>
+        <field name="level" eval="2" />
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line26" model="account.financial.html.report.line">
+        <field name="name">zum Steuersatz von 10 %</field>
+        <field name="code">ATTAX12</field>
+        <field name="sequence" eval="1"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line25"/>
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_at.tax_10%_USt_EU'), ref('l10n_at.tax_10%_MwSt')])]" />
+        <field name="formulas">balance = sum.balance</field>
+        <field name="level" eval="3" />
+    </record>
+
+    <record id="account_financial_report_l10n_at_tva_line27" model="account.financial.html.report.line">
+        <field name="name">zum Steuersatz von 20 %</field>
+        <field name="code">ATTAX13</field>
+        <field name="sequence" eval="2"/>
+        <field name="parent_id" ref="account_financial_report_l10n_at_tva_line25"/>
+        <field name="level" eval="3" />
+        <field name="domain" eval="[('tax_ids.tag_ids', 'in', [ref('l10n_at.tax_20%_USt_EU'), ref('l10n_at.tax_20%_MwSt'), ref('l10n_at.tax_20%_VSt'),])]" />
+        <field name="formulas">balance = sum.balance</field>
+    </record>
+</odoo>

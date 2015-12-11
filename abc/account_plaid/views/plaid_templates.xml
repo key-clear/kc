@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+
+  <t t-name="PlaidMFAConfigurator">
+  		<t t-if="type == 'list'">
+  			<div class="form-group">
+  			<label class="col-sm-4">Select a method of verification</label>
+	        <t t-foreach="choices" t-as="choice">
+	          <div class="radio col-sm-12">
+	            <label>
+	              <input type="radio" name="mfa-selection" t-att-mask="choice.mask" t-att-value="choice.type"><t t-esc="choice.type"/> (<t t-esc="choice.mask"/>)</input>
+	            </label>
+	          </div>
+	        </t>
+	    	</div>
+  		</t>
+  		<t t-if="type == 'questions' || type == 'selections'">
+  			<div class="form-group">
+  				<t t-foreach="choices" t-as="q">
+		          	<label class="col-sm-12"><t t-esc="q.question"/></label>
+		            <t t-if="type == 'questions'">
+		              <div class="col-sm-12">
+		                <input type="text" class="form-control js_plaid_answer" optional="false"/>
+		              </div>
+		            </t>
+		            <t t-if="type == 'selections'">
+		              <div class="col-sm-12">
+		                <select class="form-control js_plaid_answer" optional="false">
+			                <t t-foreach="q.answers" t-as="v">
+			                  <option t-att-value="v"><t t-esc="v"/></option>
+			                </t>
+			            </select>
+		              </div>
+		            </t>
+		        </t>
+            </div>
+  		</t>
+  		<t t-if="type == 'device'">
+  			<div class="form-group">
+  			<label class="col-sm-12"><t t-esc="name"/></label>
+            <div class="col-sm-3">
+              <input class="form-control js_plaid_answer" optional="false"/>
+            </div>
+            </div>
+  		</t>
+  </t>
+
+</templates>

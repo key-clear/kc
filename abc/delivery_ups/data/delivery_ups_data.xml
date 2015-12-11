@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <record id="delivery_carrier_ups_us" model="delivery.carrier">
+        <field name="name">UPS US</field>
+        <field name="fixed_price">0.0</field>
+        <field name="partner_id" ref="delivery.res_partner_delivery"/>
+        <field name="product_sale_ok" eval="False"/>
+        <field name="product_type">service</field>
+        <field name="delivery_type">ups</field>
+        <field name="ups_package_weight_unit">LBS</field>
+        <field name="ups_package_dimension_unit">IN</field>
+    </record>
+
+    <record id="delivery_carrier_ups_be" model="delivery.carrier">
+        <field name="name">UPS BE</field>
+        <field name="fixed_price">0.0</field>
+        <field name="partner_id" ref="delivery.res_partner_delivery"/>
+        <field name="product_sale_ok" eval="False"/>
+        <field name="product_type">service</field>
+        <field name="delivery_type">ups</field>
+        <field name="ups_package_weight_unit">KGS</field>
+        <field name="ups_package_dimension_unit">CM</field>
+    </record>
+
+</data>
+</odoo>

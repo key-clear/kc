@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <record id="temando_partner" model="res.partner">
+        <field name="name">Temando</field>
+        <field name="is_company" eval="True"/>
+        <field name="supplier" eval="True"/>
+        <field name="customer" eval="False"/>
+        <field name="street">550 Montgomery St. Suite 750</field>
+        <field name="zip">94111</field>
+        <field name="city">San Francisco</field>
+        <field name="state_id" ref="base.state_us_5"/>
+        <field name="website">https://www.temando.com/</field>
+        <field name="country_id" ref="base.us"/>
+        <field name="phone">1-844-678-91009</field>
+    </record>
+
+    <record id="delivery_carrier_temando" model="delivery.carrier">
+        <field name="name">Temando Domestic</field>
+        <field name="partner_id" ref="temando_partner"/>
+        <field name="fixed_price">0</field>
+        <field name="product_sale_ok" eval="False"/>
+        <field name="product_type">service</field>
+        <field name="delivery_type">temando</field>
+        <field name="temando_package_height">10</field>
+        <field name="temando_package_length">10</field>
+        <field name="temando_package_width">10</field>
+    </record>
+
+     <record id="delivery_carrier_temando_international" model="delivery.carrier">
+        <field name="name">Temando International</field>
+        <field name="partner_id" ref="temando_partner"/>
+        <field name="fixed_price">0</field>
+        <field name="product_sale_ok" eval="False"/>
+        <field name="product_type">service</field>
+        <field name="delivery_type">temando</field>
+        <field name="temando_delivery_nature">International</field>
+        <field name="temando_package_height">10</field>
+        <field name="temando_package_length">10</field>
+        <field name="temando_package_width">10</field>
+    </record>
+
+</data>
+</odoo>

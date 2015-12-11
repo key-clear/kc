@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<data noupdate="1">
+
+    <record id="usps_partner" model="res.partner">
+        <field name="name">USPS</field>
+        <field name="is_company" eval="True"/>
+        <field name="supplier" eval="True"/>
+        <field name="customer" eval="False"/>
+        <field name="website">http://www.usps.com/</field>
+        <field name="country_id" ref="base.us" />
+    </record>
+
+    <record id="delivery_carrier_usps_domestic" model="delivery.carrier">
+        <field name="name">USPS Domestic Flat Rate Box</field>
+        <field name="partner_id" ref="usps_partner"/>
+        <field name="product_type">service</field>
+        <field name="product_sale_ok" eval="False"/>
+        <field name="delivery_type">usps</field>
+        <field name="usps_service">Express</field>
+        <field name="usps_delivery_nature">domestic</field>
+        <field name="usps_domestic_regular_container">Flat Rate Box</field>
+        <field name="usps_content_type">MERCHANDISE</field>
+        <field name="country_ids" eval="[(4,(ref('base.us')))]"/>
+    </record>
+
+    <record id="delivery_carrier_usps_international" model="delivery.carrier">
+        <field name="name">USPS International Flat Rate Box</field>
+        <field name="usps_mail_type">Package</field>
+        <field name="partner_id" ref="usps_partner"/>
+        <field name="product_type">service</field>
+        <field name="product_sale_ok" eval="False"/>
+        <field name="delivery_type">usps</field>
+        <field name="usps_service">Express</field>
+        <field name="usps_delivery_nature">international</field>
+        <field name="usps_international_regular_container">FLATRATEBOX</field>
+        <field name="usps_content_type">MERCHANDISE</field>
+    </record>
+
+</data>
+</odoo>

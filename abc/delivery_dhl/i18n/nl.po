@@ -1,0 +1,301 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# * delivery_dhl
+# 
+# Translators:
+# Volluta <volluta@tutanota.com>, 2015
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2015
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 9.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-10-09 09:22+0000\n"
+"PO-Revision-Date: 2015-10-14 09:01+0000\n"
+"Last-Translator: Yenthe Van Ginneken <yenthespam@gmail.com>\n"
+"Language-Team: Dutch (http://www.transifex.com/odoo/odoo-9/language/nl/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: nl\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_region_code:0
+msgid "America"
+msgstr "Amerika"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_region_code:0
+msgid "Asia Pacific"
+msgstr "Pacifisch Azië"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_package_type:0
+msgid "Box"
+msgstr "Doos"
+
+#. module: delivery_dhl
+#: model:ir.model,name:delivery_dhl.model_delivery_carrier
+msgid "Carrier"
+msgstr "Vervoerder"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_package_dimension_unit:0
+msgid "Centimeters"
+msgstr "Centimeter"
+
+#. module: delivery_dhl
+#: model:ir.model.fields,help:delivery_dhl.field_delivery_carrier_dhl_dutiable
+msgid "Check this if your package is dutiable."
+msgstr ""
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_product_code:0
+msgid "D - Express Worldwide"
+msgstr "D - Express Worldwide"
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_account_number
+msgid "DHL Account Number"
+msgstr "DHL Account Nummer"
+
+#. module: delivery_dhl
+#: model:ir.ui.view,arch_db:delivery_dhl.view_delivery_carrier_form_with_provider_dhl
+msgid "DHL Configuration"
+msgstr "DHL Configuratie"
+
+#. module: delivery_dhl
+#: model:delivery.carrier,name:delivery_dhl.delivery_carrier_dhl_dom
+#: model:product.product,name:delivery_dhl.delivery_carrier_dhl_dom_product_product
+msgid "DHL Domestic"
+msgstr "DHL Domestic"
+
+#. module: delivery_dhl
+#: model:delivery.carrier,name:delivery_dhl.delivery_carrier_dhl_intl
+#: model:product.product,name:delivery_dhl.delivery_carrier_dhl_intl_product_product
+msgid "DHL International"
+msgstr "DHL International"
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_password
+msgid "DHL Password"
+msgstr "DHL Wachtwoord"
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/dhl_request.py:302
+#, python-format
+msgid "DHL Site ID is missing, please modify your delivery method settings."
+msgstr ""
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_SiteID
+msgid "DHL SiteID"
+msgstr "DHL SiteID"
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/dhl_request.py:306
+#, python-format
+msgid ""
+"DHL account number is missing, please modify your delivery method settings."
+msgstr ""
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/dhl_request.py:304
+#, python-format
+msgid "DHL password is missing, please modify your delivery method settings."
+msgstr ""
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_package_type:0
+msgid "Double Pallets"
+msgstr "Dubbele palletten"
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_dutiable
+msgid "Dutiable Material"
+msgstr ""
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_region_code:0
+msgid "Europe"
+msgstr "Europa"
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_attachment_count
+msgid "File"
+msgstr "Bestand"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_package_type:0
+msgid "Flyer/Smalls"
+msgstr ""
+
+#. module: delivery_dhl
+#: model:ir.model.fields,help:delivery_dhl.field_delivery_carrier_recurring_invoice
+msgid ""
+"If set, confirming a sale order with this product will create a subscription"
+msgstr "Indien ingesteld zal er een abonnement worden aangemaakt wanneer een verkooporder met dit product wordt bevestigd"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_package_dimension_unit:0
+msgid "Inches"
+msgstr "Inch"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_product_code:0
+msgid "K - Express 9:00"
+msgstr "K - Express 9:00"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_package_weight_unit:0
+msgid "Kilograms"
+msgstr "Kilogram"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_product_code:0
+msgid "N - Domestic Express"
+msgstr ""
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/dhl_request.py:128
+#, python-format
+msgid "No service available for the selected product"
+msgstr ""
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/dhl_request.py:52
+#, python-format
+msgid "No shipping available for the selected DHL product"
+msgstr ""
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_package_type:0
+msgid "Non-conveyables"
+msgstr ""
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_optional_product_ids
+msgid "Optional Products"
+msgstr "Optionele producten"
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_package_depth
+msgid "Package Depth"
+msgstr ""
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_package_dimension_unit
+msgid "Package Dimension Unit"
+msgstr ""
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_package_height
+msgid "Package Height"
+msgstr "Pakkethoogte"
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_package_type
+msgid "Package Type"
+msgstr ""
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_package_weight_unit
+msgid "Package Weight Unit"
+msgstr ""
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_package_width
+msgid "Package Width"
+msgstr "Pakketbreedte"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_package_type:0
+msgid "Pallets"
+msgstr "Palletten"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_package_type:0
+msgid "Parcels/Conveyables"
+msgstr ""
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/dhl_request.py:324
+#, python-format
+msgid "Please provide at least one item to ship."
+msgstr "Voorzie minimaal één item om te verzenden aub."
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_package_weight_unit:0
+msgid "Pounds"
+msgstr "Ponden"
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_product_code
+msgid "Product"
+msgstr "Product"
+
+#. module: delivery_dhl
+#: model:ir.model.fields,help:delivery_dhl.field_delivery_carrier_optional_product_ids
+msgid "Products to propose when add to cart."
+msgstr "Producten voorstellen bij toevoegen mandje."
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_region_code
+msgid "Region"
+msgstr "Streek"
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/delivery_dhl.py:78
+#, python-format
+msgid "Shipment created into DHL <br/> <b>Tracking Number : </b>%s"
+msgstr ""
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_recurring_invoice
+msgid "Subscription Product"
+msgstr "Abonnering product"
+
+#. module: delivery_dhl
+#: selection:delivery.carrier,dhl_product_code:0
+msgid "T - Express 12:00"
+msgstr ""
+
+#. module: delivery_dhl
+#: model:ir.model.fields,field_description:delivery_dhl.field_delivery_carrier_dhl_test_mode
+msgid "Test Mode"
+msgstr "Testmodus"
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/dhl_request.py:312
+#, python-format
+msgid ""
+"The address of the custommer is missing or wrong (Missing field(s) :\n"
+" %s)"
+msgstr ""
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/dhl_request.py:320
+#, python-format
+msgid ""
+"The address of your company warehouse is missing or wrong (Missing field(s) :\n"
+" %s)"
+msgstr ""
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/dhl_request.py:326
+#, python-format
+msgid ""
+"The estimated price cannot be computed because the weight of your product is"
+" missing."
+msgstr "De geschatte prijs kan niet berekend worden omdat het gewicht op uw product ontbreekt."
+
+#. module: delivery_dhl
+#: model:ir.model.fields,help:delivery_dhl.field_delivery_carrier_dhl_test_mode
+msgid "Uncheck this box to use production DHL Web Services"
+msgstr ""
+
+#. module: delivery_dhl
+#: code:addons/delivery_dhl/models/delivery_dhl.py:96
+#, python-format
+msgid "You can't cancel DHL shipping without pickup date."
+msgstr ""
